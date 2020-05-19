@@ -12,20 +12,27 @@ object Main {
     }
 
     /**
-      * seq の最後の要素を返すメソッドを実装してください 
+      * seq の最後の要素を返すメソッドを実装してください (要素数が0の場合は考慮しなくてよい) 
       * ??? を消して last メソッドを実装してください
       * @param seq
       * @return
       */
-    def last(seq: Seq[Int]): Int = ???
+    def last(seq: Seq[Int]): Int = seq.last
 
     /**
-      * seq の先頭から n 個の要素の和を返す sumFirstN を実装してください
+      * seq の先頭から n 個の要素の和を返す sumFirstN を実装してください (要素数が0の場合は考慮しなくてよい)
       * ??? を消して last メソッドを実装してください
       * @param seq
       * @param n
       * @return
       */
-    def sumFirstN(seq: Seq[Int], n: Int): Int = ???
+    def sumFirstN(seq: Seq[Int], n: Int): Int = {
+        var x:Int=0
+        for(i<-0 to n-1){
+           x=x+seq.apply(i) 
+        }
+        return x
+    }
+
 
 }
